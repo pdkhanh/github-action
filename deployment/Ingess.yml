@@ -1,0 +1,10 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: github-action-ingress1
+spec:
+  defaultBackend:
+    service:
+      name: github-action-services1
+      port:
+        number: 8080

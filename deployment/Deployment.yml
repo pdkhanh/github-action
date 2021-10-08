@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: github-action
+  labels:
+    app: github-action
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: github-action
+  template:
+    metadata:
+      labels:
+        app: github-action
+    spec:
+      containers:
+      - name: github-action
+        image: pdkhanh/github-action:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080    
