@@ -7,5 +7,5 @@ commonLabels:
   app: github-action
 
 resources:
-- deployment/deployment.yaml
-- deployment/service.yaml
+- deployment/Deployment.yaml
+- deployment/Service.yaml
